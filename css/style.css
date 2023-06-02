@@ -52,6 +52,7 @@ body{
     padding: 12px 24px;
     border: 1px solid #e7e9fc;
     border-radius: 4px;
+    transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .logo-sec-1-index{
     width: 60px;
@@ -110,7 +111,7 @@ body{
     display: block;
 }
 .portfolio-card-info{
-    padding: 40px 32px 164px 32px;
+    padding: 40px 32px;
     background-color:#4D5AE5;
     position: absolute;
     top: 0;
@@ -118,7 +119,7 @@ body{
     width: 100%;
     height: 100%;
     transform: translate(0, 100%);
-    transition: transform 500ms linear;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     font-family: 'Roboto';
     font-style: normal;
@@ -278,7 +279,7 @@ body{
     margin-right: auto;
 }
 .section-button{
-    background-color: #4D5AE5;
+    background-color:250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -444,6 +445,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sec-four-worker-sn-a:hover,
 .sec-four-worker-sn-a:focus{
@@ -528,6 +530,7 @@ img{
     align-items: center;
     justify-content: center;
     color: #8e8f99;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .index-main-customers-list-li-a:hover{
     color: #404bbf;
@@ -664,6 +667,7 @@ img{
 .one-footer-index{
     margin-bottom: 16px;
     display: inline-block;
+    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-p{
     max-width: 264px;
@@ -723,9 +727,11 @@ img{
 .portfolio-footer-list-li-a:focus{
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: p translateY(0%);
 }
 .portfolio-footer-list-li-a{
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-footer-div{
     display: flex;
@@ -741,15 +747,16 @@ img{
     left: 0;
     top: 0;
     background: rgba(46, 47, 66, 0.4);
-    transition: opacity 500ms visibility 500ms;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal{
     position: absolute;
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     bottom: 13px;
     background: #FCFCFC;
@@ -765,6 +772,12 @@ img{
     position: absolute;
     top: 24px;
     right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button-svg{
     height: 8px;
@@ -773,16 +786,23 @@ img{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button:hover,
 .modal-close-button:focus{
     background: #404BBF;
+    border: none;
 }
 .modal-close-button:hover:hover .modal-close-button-svg,
 .modal-close-button:hover:focus .modal-close-button-svg{
     fill: #FFFFFF;
 }
 .backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
