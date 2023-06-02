@@ -2,9 +2,6 @@
     visibility: hidden;
 }
 .index-body{
-    width: 1440px;
-    height: 3200px;
-
     background: #FFFFFF;
 }
 
@@ -130,9 +127,10 @@ body{
     letter-spacing: 0.02em;
     color: #F4F4FD;
 }
-.portfolio-list-two-li:hover .portfolio-card-info,
-.portfolio-list-two-li:focus .portfolio-card-info{
+.portfolio-footer-list-li-a:hover .portfolio-card-info,
+.portfolio-footer-list-li-a:focus .portfolio-card-info{
     transform: translate(0, -6%);
+    transform: translateY(0%);
 }
 .mail{
     font-family: 'Roboto';
@@ -188,6 +186,7 @@ body{
     font-size: 16px;
     line-height: 1.5;
     font-size: 16px;
+    color: #2E2F42;
 }
 .header-index{
     box-shadow: 0px 2px 1px  rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
