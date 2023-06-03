@@ -107,7 +107,7 @@ body{
 
 .portfolio-card-info{
     padding: 40px 32px;
-    margin: 0;
+    margin: 0 auto;
     background-color:#4D5AE5;
     position: absolute;
     top: 0;
